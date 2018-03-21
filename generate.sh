@@ -5,7 +5,8 @@ version=`cat "$dir/data/VERSION"`
 outfile="$dir/qawHaq-$version.json.bz2"
 
 "$dir/data/xml2json.py" | bzip2 > "$outfile"
-size=`stat -c %s "$outfile"`
+size=`stat -c %s "$outfile" 2>/dev/null ||
+      stat -f %z "$outfile"`
 
 tee $dir/manifest.json <<EOF
 {
