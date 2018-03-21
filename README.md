@@ -6,16 +6,16 @@ https://github.com/De7vID/klingon-assistant-data
 Clients should use the manifest file `manifest.json` to identify and locate
 database files. The format of the manifest is:
 
-  {
-    "<format_version>" : {
-      "status" : "<status>",
-      "latest" : "<database_version>",
-      "<database_version>" : {
-        "path" : "<path_to_database_file>",
-        "size" : <database_file_size>
+    {
+      "<format_version>" : {
+        "status" : "<status>",
+        "latest" : "<database_version>",
+        "<database_version>" : {
+          "path" : "<path_to_database_file>",
+          "size" : <database_file_size>
+        }
       }
     }
-  }
 
 `<format_version>` refers to the format version of the database. Multiple
 concurrent database formats can be supported by giving each format version
@@ -47,10 +47,10 @@ dictionary of metadata about the given database file:
 A manifest file may indicate that clients should consult a different location
 for updates by exposing a `moved_to` key, and not reference any databases:
 
-  {
-    "moved_to" : "<new_location>",
-    "note" : "<optional_notes>"
-  }
+    {
+      "moved_to" : "<new_location>",
+      "note" : "<optional_notes>"
+    }
 
 `<new_location>` should ideally be an absolute URI (as determined by the
 presence of "://"), but may be relative to the current manifest file, if
