@@ -1,10 +1,10 @@
 {
   "1" : {
     "status" : "active",
-    "latest" : "2018.03.07b",
-    "2018.03.07b" : {
-      "path" : "qawHaq-2018.03.07b.json.bz2",
-      "size" : 300605
+    "latest" : "2018.03.21a",
+    "2018.03.21a" : {
+      "path" : "qawHaq-2018.03.21a.json.bz2",
+      "size" : 302477
     }
   }
 }
