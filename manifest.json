@@ -1,10 +1,18 @@
 {
-  "1" : {
+  "iOS-1" : {
     "status" : "active",
     "latest" : "2018.03.21a",
     "2018.03.21a" : {
       "path" : "qawHaq-2018.03.21a.json.bz2",
-      "size" : 302477
+      "size" : 296722
+    }
+  },
+  "1" : {
+    "status" : "deprecated",
+    "latest" : "2018.03.21a",
+    "2018.03.21a" : {
+      "path" : "qawHaq-2018.03.21a.json.bz2",
+      "size" : 296722
     }
   }
 }
