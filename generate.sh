@@ -8,10 +8,21 @@ outfile="$dir/qawHaq-$version.json.bz2"
 size=`stat -c %s "$outfile" 2>/dev/null ||
       stat -f %z "$outfile"`
 
+# Database format "1" will be removed once all existing installations of the
+# pre-release iOS boQwI' have been updated to versions that use "iOS-1".
+
 tee $dir/manifest.json <<EOF
 {
-  "1" : {
+  "iOS-1" : {
     "status" : "active",
+    "latest" : "$version",
+    "$version" : {
+      "path" : "qawHaq-$version.json.bz2",
+      "size" : $size
+    }
+  },
+  "1" : {
+    "status" : "deprecated",
     "latest" : "$version",
     "$version" : {
       "path" : "qawHaq-$version.json.bz2",
