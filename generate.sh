@@ -2,11 +2,22 @@
 
 dir="`dirname $0`"
 version=`cat "$dir/data/VERSION"`
-outfile="$dir/qawHaq-$version.json.bz2"
+extra=`cat "$dir/data/EXTRA"`
 
-"$dir/data/xml2json.py" | bzip2 > "$outfile"
-size=`stat -c %s "$outfile" 2>/dev/null ||
-      stat -f %z "$outfile"`
+cd data
+./renumber.py
+./generate_db.sh --noninteractive
+cd ..
+
+android_outfile="$dir/qawHaq-$version.db.zip"
+zip $android_outfile "$dir/data/qawHaq.db"
+android_size=`stat -c %s "$android_outfile" 2>/dev/null ||
+              stat -f %z "$android_outfile"`
+
+ios_outfile="$dir/qawHaq-$version.json.bz2"
+"$dir/data/xml2json.py" | bzip2 > "$ios_outfile"
+ios_size=`stat -c %s "$ios_outfile" 2>/dev/null ||
+          stat -f %z "$ios_outfile"`
 
 # Database format "1" will be removed once all existing installations of the
 # pre-release iOS boQwI' have been updated to versions that use "iOS-1".
@@ -18,15 +29,16 @@ tee $dir/manifest.json <<EOF
     "latest" : "$version",
     "$version" : {
       "path" : "qawHaq-$version.json.bz2",
-      "size" : $size
+      "size" : $ios_size
     }
   },
-  "1" : {
-    "status" : "deprecated",
+  "Android-1" : {
+    "status" : "active",
     "latest" : "$version",
     "$version" : {
-      "path" : "qawHaq-$version.json.bz2",
-      "size" : $size
+      "path" : "qawHaq-$version.db.zip",
+      "extra" : $extra,
+      "size" : $android_size
     }
   }
 }
