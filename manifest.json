@@ -1,27 +1,19 @@
 {
   "iOS-1" : {
     "status" : "active",
-    "latest" : "2018.03.29a",
-    "2018.03.29a" : {
-      "path" : "qawHaq-2018.03.29a.json.bz2",
-      "size" : 301732
-    }
-  },
-  "1" : {
-    "status" : "deprecated",
-    "latest" : "2018.03.29a",
-    "2018.03.29a" : {
-      "path" : "qawHaq-2018.03.29a.json.bz2",
-      "size" : 301732
+    "latest" : "2018.04.04b",
+    "2018.04.04b" : {
+      "path" : "qawHaq-2018.04.04b.json.bz2",
+      "size" : 304311
     }
   },
   "Android-1" : {
     "status" : "active",
-    "latest" : "2018.03.29a",
-    "2018.03.29a" : {
-      "path" : "qawHaq-2018.03.29a.db.zip",
+    "latest" : "2018.04.04b",
+    "2018.04.04b" : {
+      "path" : "qawHaq-2018.04.04b.db.zip",
       "extra" : 14340,
-      "size" : 468772
+      "size" : 468803
     }
   }
 }
