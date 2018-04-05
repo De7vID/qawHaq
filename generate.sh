@@ -19,9 +19,6 @@ ios_outfile="$dir/qawHaq-$version.json.bz2"
 ios_size=`stat -c %s "$ios_outfile" 2>/dev/null ||
           stat -f %z "$ios_outfile"`
 
-# Database format "1" will be removed once all existing installations of the
-# pre-release iOS boQwI' have been updated to versions that use "iOS-1".
-
 tee $dir/manifest.json <<EOF
 {
   "iOS-1" : {
