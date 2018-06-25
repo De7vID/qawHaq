@@ -17,9 +17,9 @@
   },
   "Android-2" : {
     "status" : "active",
-    "latest" : "2018.06.24b",
-    "2018.06.24b" : {
-      "path" : "qawHaq-2018.06.24b.db.zip",
+    "latest" : "2018.06.25b",
+    "2018.06.25b" : {
+      "path" : "qawHaq-2018.06.25b.db.zip",
       "extra" : 14343
     }
   }
