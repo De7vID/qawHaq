@@ -17,10 +17,10 @@
   },
   "Android-2" : {
     "status" : "active",
-    "latest" : "2018.06.28a",
-    "2018.06.28a" : {
-      "path" : "qawHaq-2018.06.28a.db.zip",
-      "extra" : 14346
+    "latest" : "2018.07.02a",
+    "2018.07.02a" : {
+      "path" : "qawHaq-2018.07.02a.db.zip",
+      "extra" : 14348
     }
   }
 }
