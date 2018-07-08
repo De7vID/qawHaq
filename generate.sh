@@ -27,14 +27,6 @@ tee $dir/manifest.json <<EOF
       "size" : $ios_size
     }
   },
-  "Android-1" : {
-    "status" : "obsolete",
-    "latest" : "2018.06.19b",
-    "2018.06.19b" : {
-      "path" : "qawHaq-2018.06.19b.db.zip",
-      "extra" : 14343
-    }
-  },
   "Android-2" : {
     "status" : "active",
     "latest" : "$version",
