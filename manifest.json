@@ -1,17 +1,17 @@
 {
   "iOS-1" : {
     "status" : "active",
-    "latest" : "2018.07.24d",
-    "2018.07.24d" : {
-      "path" : "qawHaq-2018.07.24d.json.bz2",
-      "size" : 372639
+    "latest" : "2018.07.28a",
+    "2018.07.28a" : {
+      "path" : "qawHaq-2018.07.28a.json.bz2",
+      "size" : 370117
     }
   },
   "Android-2" : {
     "status" : "active",
-    "latest" : "2018.07.24d",
-    "2018.07.24d" : {
-      "path" : "qawHaq-2018.07.24d.db.zip",
+    "latest" : "2018.07.28a",
+    "2018.07.28a" : {
+      "path" : "qawHaq-2018.07.28a.db.zip",
       "extra" : 14485
     }
   }
