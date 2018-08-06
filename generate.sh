@@ -7,6 +7,7 @@ extra=`cat "$dir/data/EXTRA"`
 cd data
 ./renumber.py
 ./generate_db.sh --noninteractive
+./unnumber.sh
 cd ..
 
 android_outfile="$dir/qawHaq-$version.db.zip"
