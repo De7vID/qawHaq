@@ -1,17 +1,17 @@
 {
   "iOS-1" : {
     "status" : "active",
-    "latest" : "2019.04.01a",
-    "2019.04.01a" : {
-      "path" : "qawHaq-2019.04.01a.json.bz2",
-      "size" : 546694
+    "latest" : "2019.04.05a",
+    "2019.04.05a" : {
+      "path" : "qawHaq-2019.04.05a.json.bz2",
+      "size" : 543178
     }
   },
   "Android-2" : {
     "status" : "active",
-    "latest" : "2019.04.01a",
-    "2019.04.01a" : {
-      "path" : "qawHaq-2019.04.01a.db.zip",
+    "latest" : "2019.04.05a",
+    "2019.04.05a" : {
+      "path" : "qawHaq-2019.04.05a.db.zip",
       "extra" : 14622
     }
   }
