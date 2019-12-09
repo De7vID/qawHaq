@@ -45,3 +45,4 @@ EOF
 
 git add "$dir/manifest.json"
 git add "$dir/data"
+git commit -m "version $version"
