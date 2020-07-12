@@ -32,7 +32,7 @@ tee $dir/manifest.json <<EOF
       "size" : $ios_size
     }
   },
-  "Android-2" : {
+  "Android-3" : {
     "status" : "active",
     "latest" : "$version",
     "$version" : {
