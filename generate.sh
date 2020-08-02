@@ -17,18 +17,6 @@ extra=`cat "$dir/data/EXTRA"`
 android_outfile="$dir/qawHaq-$version.db.zip"
 zip $android_outfile "$dir/data/qawHaq.db"
 
-# Generate Android-2 format version file (exclude pt).
-# TODO: Remove this section.
-cd data
-./strip_pt.sh
-./renumber.py
-./generate_db.sh --noninteractive
-git reset --hard
-cd ..
-
-old_android_outfile="$dir/qawHaq-$version-2.db.zip"
-zip $old_android_outfile "$dir/data/qawHaq.db"
-
 # Generate iOS-1 format version file.
 ios_outfile="$dir/qawHaq-$version.json.bz2"
 "$dir/data/xml2json.py" | bzip2 > "$ios_outfile"
@@ -47,14 +35,6 @@ tee $dir/manifest.json <<EOF
     "$version" : {
       "path" : "qawHaq-$version.json.bz2",
       "size" : $ios_size
-    }
-  },
-  "Android-2" : {
-    "status" : "active",
-    "latest" : "$version",
-    "$version" : {
-      "path" : "qawHaq-$version-2.db.zip",
-      "extra" : $extra
     }
   },
   "Android-3" : {
