@@ -7,9 +7,7 @@ git rm "$dir/qawHaq-*"
 
 # Generate Android-3 format version file.
 cd data
-./renumber.py
 ./generate_db.sh --noninteractive
-./unnumber.sh
 cd ..
 
 version=`cat "$dir/data/VERSION"`
