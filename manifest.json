@@ -1,18 +1,18 @@
 {
   "iOS-1" : {
     "status" : "active",
-    "latest" : "2020.09.30a",
-    "2020.09.30a" : {
-      "path" : "qawHaq-2020.09.30a.json.bz2",
-      "size" : 1381392
+    "latest" : "2020.10.14a",
+    "2020.10.14a" : {
+      "path" : "qawHaq-2020.10.14a.json.bz2",
+      "size" : 1380656
     }
   },
   "Android-3" : {
     "status" : "active",
-    "latest" : "2020.09.30a",
-    "2020.09.30a" : {
-      "path" : "qawHaq-2020.09.30a.db.zip",
-      "extra" : 14848
+    "latest" : "2020.10.14a",
+    "2020.10.14a" : {
+      "path" : "qawHaq-2020.10.14a.db.zip",
+      "extra" : 14849
     }
   }
 }
