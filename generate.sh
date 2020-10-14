@@ -2,6 +2,14 @@
 
 dir="`dirname $0`"
 
+# Record sizes of old versions.
+old_android_outfile="$dir/qawHaq-*.db.zip"
+old_android_size=`stat -c %s $old_android_outfile 2>/dev/null ||
+                  stat -f %z $old_android_outfile`
+old_ios_outfile="$dir/qawHaq-*.json.bz2"
+old_ios_size=`stat -c %s $old_ios_outfile 2>/dev/null ||
+              stat -f %z $old_ios_outfile`
+
 # Delete old versions.
 git rm "$dir/qawHaq-*"
 
@@ -14,6 +22,8 @@ version=`cat "$dir/data/VERSION"`
 extra=`cat "$dir/data/EXTRA"`
 android_outfile="$dir/qawHaq-$version.db.zip"
 zip $android_outfile "$dir/data/qawHaq.db"
+android_size=`stat -c %s "$android_outfile" 2>/dev/null ||
+              stat -f %z "$android_outfile"`
 
 # Generate iOS-1 format version file.
 ios_outfile="$dir/qawHaq-$version.json.bz2"
@@ -46,6 +56,11 @@ tee $dir/manifest.json <<EOF
 }
 EOF
 
+# Update repository.
 git add "$dir/manifest.json"
 git add "$dir/data"
 git commit -m "version $version"
+
+# Sanity check file size changes.
+echo "Android: $old_android_size to $android_size"
+echo "iOS:     $old_ios_size to $ios_size"
