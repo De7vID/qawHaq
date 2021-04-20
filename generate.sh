@@ -1,6 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 dir="`dirname $0`"
+
+# Check for MacOS and use GNU-sed if detected.
+if [[ "$(uname -s)" = "Darwin" ]]
+then
+    SED=gsed
+else
+    SED=sed
+fi
 
 # Record sizes of old versions.
 old_android_outfile="$dir/qawHaq-*.db.zip"
@@ -27,7 +35,10 @@ android_size=`stat -c %s "$android_outfile" 2>/dev/null ||
 
 # Generate iOS-1 format version file.
 ios_outfile="$dir/qawHaq-$version.json.bz2"
-"$dir/data/xml2json.py" | bzip2 > "$ios_outfile"
+# Temporarily delete "klcp1" tags until flingon-assister is fixed.
+"$dir/data/xml2json.py" > temp.json
+${SED} -e "s/,klcp1//g" temp.json | bzip2 > "$ios_outfile"
+rm temp.json
 ios_size=`stat -c %s "$ios_outfile" 2>/dev/null ||
           stat -f %z "$ios_outfile"`
 
