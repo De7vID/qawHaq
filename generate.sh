@@ -56,6 +56,14 @@ tee $dir/manifest.json <<EOF
       "size" : $ios_size
     }
   },
+  "JSON-1" : {
+    "status" : "active",
+    "latest" : "$version",
+    "$version" : {
+      "path" : "qawHaq-$version.json.bz2",
+      "size" : $ios_size
+    }
+  },
   "Android-4" : {
     "status" : "active",
     "latest" : "$version",
