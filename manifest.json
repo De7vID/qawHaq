@@ -1,26 +1,26 @@
 {
   "iOS-1" : {
     "status" : "active",
-    "latest" : "2022.06.13b",
-    "2022.06.13b" : {
-      "path" : "qawHaq-2022.06.13b.json.bz2",
-      "size" : 1443252
+    "latest" : "2022.07.09a",
+    "2022.07.09a" : {
+      "path" : "qawHaq-2022.07.09a.json.bz2",
+      "size" : 1447766
     }
   },
   "JSON-1" : {
     "status" : "active",
-    "latest" : "2022.06.13b",
-    "2022.06.13b" : {
-      "path" : "qawHaq-2022.06.13b.json.bz2",
-      "size" : 1443252
+    "latest" : "2022.07.09a",
+    "2022.07.09a" : {
+      "path" : "qawHaq-2022.07.09a.json.bz2",
+      "size" : 1447766
     }
   },
   "Android-4" : {
     "status" : "active",
-    "latest" : "2022.06.13b",
-    "2022.06.13b" : {
-      "path" : "qawHaq-2022.06.13b.db.zip",
-      "extra" : 15102
+    "latest" : "2022.07.09a",
+    "2022.07.09a" : {
+      "path" : "qawHaq-2022.07.09a.db.zip",
+      "extra" : 15112
     }
   }
 }
