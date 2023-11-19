@@ -21,7 +21,7 @@ old_ios_size=`stat -c %s ${old_ios_outfile} 2>/dev/null ||
 # Delete old versions.
 git rm "${dir}/qawHaq-*"
 
-# Generate Android-4 format version file.
+# Generate Android-5 format version file.
 cd data
 ./generate_db.sh --noninteractive
 cd ..
@@ -64,7 +64,7 @@ tee ${dir}/manifest.json <<EOF
       "size" : ${ios_size}
     }
   },
-  "Android-4" : {
+  "Android-5" : {
     "status" : "active",
     "latest" : "${version}",
     "${version}" : {
