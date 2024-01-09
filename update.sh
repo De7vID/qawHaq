@@ -64,6 +64,14 @@ tee ${dir}/manifest.json <<EOF
       "size" : ${ios_size}
     }
   },
+  "Android-4" : {
+    "status" : "active",
+    "latest" : "${version}",
+    "${version}" : {
+      "path" : "qawHaq-${version}.db.zip",
+      "extra" : ${extra}
+    }
+  },
   "Android-5" : {
     "status" : "active",
     "latest" : "${version}",
